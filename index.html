@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/pixel-operator"
+      type="text/css"
+    />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <title>Etch a sketch</title>
+  </head>
+  <body>
+    <div class="title">Etch A Sketch</div>
+    <div class="content">
+      <div class="wrapper">
+        <div class="container card"></div>
+      </div>
+      <div class="tools">
+        <div class="tool">
+          <input type="color" value="#000000" id="color-picker" />
+          <button class="grid-eraser button button-click">Eraser</button>
+          <button class="grid-line button button-click" value="show">
+            Grid Line
+          </button>
+          <button class="grid-clear button">Clear</button>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="32"
+              value="16"
+              class="slider"
+              id="range"
+            />
+          </div>
+          <div class="value"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

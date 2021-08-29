@@ -1,0 +1,167 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+body {
+  font-family: 'PixelOperatorMonoHBRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+}
+
+.container {
+  display: grid;
+  margin: 30px;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  width: 450px;
+  height: 450px;
+}
+
+.bordered {
+  border: 0.01px solid rgb(236, 236, 236);
+}
+
+.tools {
+  width: 300px;
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+
+.tool {
+  width: 160px;
+}
+
+.card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#color-picker {
+  width: 160px;
+  height: 40px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  border: 0.1em solid #ffffff;
+  margin: 0.5em 0.3em 0.3em 0;
+  border-radius: 0.4em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'PixelOperatorMonoHBRegular';
+  font-weight: 300;
+  font-size: 17px;
+  color: black;
+  background-color: rgb(219, 219, 219);
+  text-align: center;
+  width: 160px;
+  transition: all 0.2s;
+}
+
+.button:hover,
+input[type="color"]:hover {
+  transform: scale(1.05);
+}
+
+.button-click {
+  color: white;
+  background-color: black;
+}
+@media all and (max-width: 30em) {
+  .button-click {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 380px;
+    height: 380px;
+  }
+  .tools {
+    width: 200px;
+  }
+}
+
+@media (max-width: 650px) {
+  .title {
+    font-size: 40px;
+  }
+  .container {
+    width: 250px;
+    height: 250px;
+  }
+  .content {
+    flex-direction: column;
+    font-size: 13px;
+  }
+  .tools {
+    width: 120px;
+  }
+  .tool {
+    display: block;
+    margin: 0.4em auto;
+    text-align: center;
+    width: 120px;
+  }
+  .button,
+  .slider {
+    width: 120px;
+    font-size: 13px;
+  }
+  #color-picker {
+    width: 120px;
+  }
+}
+
+/* 
+@media (max-width: 850px) {
+  .main {
+    gap: 50px;
+  }
+
+  .settings {
+    width: 150px;
+    gap: 16px;
+  }
+
+  .size-value {
+    margin-bottom: -4px;
+  }
+
+  .grid {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 650px) {
+  .title {
+    font-size: 50px;
+  }
+
+  .main {
+    flex-direction: column-reverse;
+  }
+
+  .grid {
+    width: 300px;
+    height: 300px;
+  }
+} */
